@@ -7,8 +7,8 @@ storm/starter/bolt/SingleJoinBolt.class
 storm/starter/ReadDB.class
 storm/starter/bolt/RollingCountBolt.class
 storm/starter/tools/RankableObjectWithFields.class
-storm/starter/trident/TridentWordCount.class
 storm/starter/tools/Rankings.class
+storm/starter/trident/TridentWordCount.class
 storm/starter/trident/TridentReach$StaticSingleKeyMapState.class
 storm/starter/bolt/SingleJoinBolt$ExpireCallback.class
 storm/starter/bolt/PrinterBolt.class

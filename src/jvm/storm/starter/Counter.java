@@ -18,6 +18,13 @@ import java.util.Set;
 import java.util.Map;
 import java.util.HashSet;
 public class Counter extends BaseBasicBolt {
+    public static int safeLongToInt(long l) {
+            if (l < Integer.MIN_VALUE || l > Integer.MAX_VALUE) {
+                        throw new IllegalArgumentException
+                                        (l + " cannot be cast to int without changing its value.");
+                            }
+                return (int) l;
+    }
 	JedisCluster jc;
 	@Override
 	public void prepare(Map StormConf, TopologyContext context) {
@@ -34,6 +41,7 @@ public class Counter extends BaseBasicBolt {
 		String key = x + '_' + y;
 		jc.setnx('z'+key, Integer.toString(0));
 		jc.incr('z'+key);
+        jc.expire('z'+key, safeLongToInt(jc.ttl('z'+key))+300 );
 	}
 	@Override
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {

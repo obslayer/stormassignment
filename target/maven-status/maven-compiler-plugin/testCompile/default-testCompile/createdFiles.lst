@@ -6,5 +6,5 @@ storm/starter/tools/MockTupleHelpers.class
 storm/starter/tools/RankableObjectWithFieldsTest.class
 storm/starter/tools/NthLastModifiedTimeTrackerTest.class
 storm/starter/tools/SlidingWindowCounterTest.class
-storm/starter/bolt/TotalRankingsBoltTest.class
 storm/starter/bolt/RollingCountBoltTest.class
+storm/starter/bolt/TotalRankingsBoltTest.class

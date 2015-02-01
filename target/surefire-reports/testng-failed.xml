@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="storm.starter.bolt.IntermediateRankingsBoltTest">
+        <methods>
+          <include name="positiveEmitFrequencyShouldBeOk" invocation-numbers="0 1 2 3"/>
+          <include name="shouldSetTickTupleFrequencyInComponentConfigurationToNonZeroValue"/>
+          <include name="positiveTopNShouldBeOk" invocation-numbers="0 1 2 3"/>
+          <include name="shouldEmitSomethingIfTickTupleIsReceived"/>
+          <include name="shouldEmitNothingIfNormalTupleIsReceived"/>
+          <include name="negativeOrZeroTopNShouldThrowIAE" invocation-numbers="0 1 2 3 4"/>
+          <include name="negativeOrZeroEmitFrequencyShouldThrowIAE" invocation-numbers="0 1 2 3 4"/>
+          <include name="shouldDeclareOutputFields"/>
+        </methods>
+      </class> <!-- storm.starter.bolt.IntermediateRankingsBoltTest -->
+      <class name="storm.starter.bolt.RollingCountBoltTest">
+        <methods>
+          <include name="shouldSetTickTupleFrequencyInComponentConfigurationToNonZeroValue"/>
+          <include name="shouldEmitSomethingIfAtLeastOneObjectWasCountedAndTickTupleIsReceived"/>
+          <include name="shouldEmitNothingIfNoObjectHasBeenCountedYetAndTickTupleIsReceived"/>
+          <include name="shouldDeclareOutputFields"/>
+        </methods>
+      </class> <!-- storm.starter.bolt.RollingCountBoltTest -->
+      <class name="storm.starter.bolt.TotalRankingsBoltTest">
+        <methods>
+          <include name="positiveTopNShouldBeOk" invocation-numbers="0 1 2 3"/>
+          <include name="positiveEmitFrequencyShouldBeOk" invocation-numbers="0 1 2 3"/>
+          <include name="shouldDeclareOutputFields"/>
+          <include name="shouldEmitSomethingIfTickTupleIsReceived"/>
+          <include name="shouldSetTickTupleFrequencyInComponentConfigurationToNonZeroValue"/>
+          <include name="negativeOrZeroTopNShouldThrowIAE" invocation-numbers="0 1 2 3 4"/>
+          <include name="negativeOrZeroEmitFrequencyShouldThrowIAE" invocation-numbers="0 1 2 3 4"/>
+          <include name="shouldEmitNothingIfNormalTupleIsReceived"/>
+        </methods>
+      </class> <!-- storm.starter.bolt.TotalRankingsBoltTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
